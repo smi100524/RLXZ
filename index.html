@@ -12,7 +12,6 @@
             font-family: "SimHei", "Microsoft YaHei", "PingFang SC", sans-serif;
             -webkit-font-smoothing: antialiased;
         }
-
         body {
             background: linear-gradient(135deg, #FFF8E7 0%, #FFFEF0 100%);
             min-height: 100vh;
@@ -22,7 +21,6 @@
             font-size: 15px;
             color: #6B5B45;
         }
-
         .container {
             max-width: 900px;
             margin: 0 auto;
@@ -32,28 +30,24 @@
             box-shadow: 0 8px 32px rgba(0,0,0,0.06);
             border: 2px solid #FFE4B5;
         }
-
         .header {
             text-align: center;
             margin-bottom: 24px;
             padding-bottom: 20px;
             border-bottom: 2px dashed #FFE4B5;
         }
-
         .main-title {
             font-size: 32px;
             color: #FF6B35;
             margin-bottom: 12px;
             font-weight: bold;
         }
-
         .service-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 12px;
             margin: 16px 0;
         }
-
         .service-card {
             background: white;
             border-radius: 16px;
@@ -64,7 +58,6 @@
             flex-direction: column;
             height: 100%;
         }
-
         /* 长条卡片样式 */
         .service-card-long {
             background: white;
@@ -76,12 +69,10 @@
             width: 100%;
             margin: 16px 0;
         }
-
         .service-card:hover, .service-card-long:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
-
         .service-icon {
             width: 44px;
             height: 44px;
@@ -104,23 +95,20 @@
             color: #1E40AF;
             border-color: #BFDBFE;
         }
-        .card-talent .service-contact {
-            background: #EFF6FF;
-        }
         .card-talent .service-name {
             color: #1E3A8A;
         }
         .card-talent .service-content {
             color: #1E40AF;
         }
-        .card-talent .contact-person {
+        .card-talent .contact-tag {
+            background: #EFF6FF;
+            color: #1E40AF;
+        }
+        .card-talent .feishu-contact {
             color: #1E3A8A;
         }
-        .card-talent .contact-phone {
-            color: #1E3A8A;
-        }
-
-        /* 人才发展标题+总述长条卡片 - 父级统一控色 */
+        /* 人才发展标题+总述长条卡片 */
         .card-talent-title {
             border: 2px solid #3B82F6;
             background: #EFF6FF;
@@ -132,7 +120,7 @@
             border-color: #1E40AF;
         }
         .card-talent-title .service-name {
-            font-size: 18px;
+            font-size: 22px;
         }
         .card-talent-title .desc-text {
             font-size: 18px;
@@ -155,23 +143,20 @@
             color: #14532D;
             border-color: #BBF7D0;
         }
-        .card-employee .service-contact {
-            background: #F0FDF4;
-        }
         .card-employee .service-name {
             color: #14532D;
         }
         .card-employee .service-content {
             color: #14532D;
         }
-        .card-employee .contact-person {
+        .card-employee .contact-tag {
+            background: #F0FDF4;
             color: #14532D;
         }
-        .card-employee .contact-phone {
+        .card-employee .feishu-contact {
             color: #14532D;
         }
-
-        /* 人事标题+总述长条卡片 - 父级统一控色 */
+        /* 人事标题+总述长条卡片 */
         .card-employee-title {
             border: 2px solid #22C55E;
             background: #F0FDF4;
@@ -183,7 +168,7 @@
             border-color: #14532D;
         }
         .card-employee-title .service-name {
-            font-size: 18px;
+            font-size: 22px;
         }
         .card-employee-title .desc-text {
             font-size: 18px;
@@ -206,23 +191,20 @@
             color: #7C2D12;
             border-color: #FDBA74;
         }
-        .card-admin .service-contact {
-            background: #FFF7ED;
-        }
         .card-admin .service-name {
             color: #7C2D12;
         }
         .card-admin .service-content {
             color: #7C2D12;
         }
-        .card-admin .contact-person {
+        .card-admin .contact-tag {
+            background: #FFF7ED;
             color: #7C2D12;
         }
-        .card-admin .contact-phone {
+        .card-admin .feishu-contact {
             color: #7C2D12;
         }
-
-        /* 行政标题+总述长条卡片 - 父级统一控色 */
+        /* 行政标题+总述长条卡片 */
         .card-admin-title {
             border: 2px solid #F97316;
             background: #FFF7ED;
@@ -234,7 +216,7 @@
             border-color: #7C2D12;
         }
         .card-admin-title .service-name {
-            font-size: 18px;
+            font-size: 22px;
         }
         .card-admin-title .desc-text {
             font-size: 18px;
@@ -254,20 +236,15 @@
             margin-bottom: 12px;
             flex-shrink: 0;
         }
-
         .service-name {
             font-weight: 700;
             font-size: 20px;
         }
-
         .service-content {
             font-size: 15px;
             line-height: 1.8;
-            margin-bottom: 12px;
-            flex: 1;
             word-break: break-all;
         }
-
         .service-content a {
             color: inherit;
             font-weight: inherit;
@@ -277,30 +254,62 @@
             letter-spacing: normal;
         }
 
-        .service-contact {
-            display: flex;
-            justify-content: space-between;
+        /* 同段末尾彩色小标签 */
+        .contact-tag {
+            display: inline-flex;
             align-items: center;
-            background: rgba(255,228,181,0.3);
-            padding: 10px 16px;
-            border-radius: 12px;
-            margin-top: auto;
+            gap: 4px;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-left: 6px;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+        .contact-tag + .contact-tag {
+            margin-left: 8px;
+        }
+        .tag-icon {
+            width: 14px;
+            height: 14px;
             flex-shrink: 0;
-            gap: 8px;
-            flex-wrap: wrap;
         }
 
-        .contact-person {
+        /* 顶部长条飞书联系人样式（保持不变） */
+        .feishu-contact {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
             font-weight: 600;
             font-size: 18px;
             white-space: nowrap;
         }
-
-        .contact-phone {
-            font-weight: bold;
+        .feishu-icon {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+        .card-talent-title .feishu-contact,
+        .card-employee-title .feishu-contact,
+        .card-admin-title .feishu-contact {
             font-size: 20px;
-            white-space: nowrap;
+            font-weight: bold;
+        }
+        .card-talent-title .feishu-icon,
+        .card-employee-title .feishu-icon,
+        .card-admin-title .feishu-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* 飞书姓名链接样式 - 与原文字完全一致 */
+        .feishu-contact a,
+        .contact-tag a {
+            color: inherit;
             text-decoration: none;
+            font-weight: inherit;
+            cursor: pointer;
         }
 
         .footer-info {
@@ -424,15 +433,20 @@
             min-height: auto;
             overflow: visible;
         }
-        .qr-img {
+        /* 二维码占位框 */
+        .qr-placeholder {
             width: 180px;
             height: 180px;
-            max-width: 100%;
-            object-fit: contain;
-            border-radius: 4px;
             border: 1.5px dashed #ea580c;
             padding: 4px;
             background: #fff5eb;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #c2410c;
+            font-size: 14px;
+            text-align: center;
         }
         .qr-label {
             font-size: 20px;
@@ -465,7 +479,7 @@
             }
         }
 
-        /* 手机端全面适配 */
+        /* 手机端适配 */
         @media screen and (max-width: 768px) {
             body {
                 padding: 8px;
@@ -491,21 +505,19 @@
                 font-size: 14px;
                 line-height: 1.7;
             }
-            .service-contact {
-                padding: 10px 12px;
-                gap: 6px;
+            .contact-tag {
+                font-size: 13px;
+                padding: 2px 6px;
+                margin-left: 4px;
             }
-            .contact-person {
-                font-size: 16px;
-            }
-            .contact-phone {
-                font-size: 18px;
+            .tag-icon {
+                width: 13px;
+                height: 13px;
             }
             .footer-info {
                 font-size: 13px;
                 padding: 10px;
             }
-
             /* 二维码区域手机端纵向排布 */
             .bottom-qr-body {
                 flex-direction: column;
@@ -521,12 +533,10 @@
                 gap: 8px;
                 padding: 8px 0;
             }
-            .qr-img {
+            .qr-placeholder {
                 width: 220px;
                 height: 220px;
             }
-
-            /* 说明文字手机端适配 */
             .text-section {
                 padding: 12px;
             }
@@ -543,21 +553,19 @@
                 font-size: 17px;
             }
         }
-
         /* 超小屏手机适配 */
         @media screen and (max-width: 360px) {
             .main-title {
                 font-size: 22px;
             }
-            .qr-img {
+            .qr-placeholder {
                 width: 200px;
                 height: 200px;
             }
-            .contact-phone {
-                font-size: 16px;
+            .contact-tag {
+                font-size: 12px;
             }
         }
-
         body {
             overflow-x: hidden;
             -webkit-text-size-adjust: 100%;
@@ -565,16 +573,9 @@
         .service-card, .service-card-long, .qr-item {
             -webkit-tap-highlight-color: transparent;
         }
-        .contact-phone {
-            cursor: pointer;
-            user-select: all;
-        }
         html {
             scroll-behavior: smooth;
             -webkit-overflow-scrolling: touch;
-        }
-        a.contact-phone:active {
-            opacity: 0.7;
         }
     </style>
 </head>
@@ -584,16 +585,20 @@
             <h1 class="main-title">🏢 人力行政一站式服务</h1>
         </div>
 
-        <!-- 一、人才发展模块（标题+总述合并版） -->
+        <!-- 一、人才发展模块 -->
         <div class="service-card-long card-talent-title">
             <div class="service-header" style="flex-wrap: wrap; gap: 16px; margin-bottom: 0;">
                 <div style="display: flex; align-items: center; gap: 12px;">
                     <div class="service-icon">🧑‍💼</div>
                     <div class="service-name">人才发展</div>
                 </div>
-                <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
-                    <span style="font-weight: 600; font-size: 18px;">张馨</span>
-                    <a href="tel:17704066868" style="font-weight: bold; font-size: 18px;">17704066868</a>
+                <div class="feishu-contact">
+                    <svg class="feishu-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 8c0 1 7 3.5 14.745 16.744s4.184-4.363 6.255-5.744c1.5-1 2.712-1.332 2.712-1.332C33.712 15.156 29.5 8 28 8z" fill="#00d6b9"/>
+                        <path d="M43.5 18.5c-1-.667-3.65-1.771-6.5-1.5a15 15 0 0 0-3.288.668s-1.212.332-2.712 1.332c-2.07 1.38-6.255 5.744-6.255 5.744-1.428 1.397-3.05 2.732-5.245 3.756s7 3 11.5 3c5.063 0 7-3.5 7-3.5 1.5-3.305 3.5-7 5.5-9.5" fill="#163c9a"/>
+                        <path d="M4 17.5v17c0 1 6 5.5 15 5.5 10 0 17.05-7.705 19-12 0 0-1.937 3.5-7 3.5-4.5 0-11.5-3-11.5-3-5.117-2.239-10.03-6.577-12.906-9.117C4.974 17.953 4 17.093 4 17.5z" fill="#3370ff"/>
+                    </svg>
+                    <a href="feishu://chat/user/zhangxin_id">@张馨</a>
                 </div>
             </div>
             <div class="desc-text">
@@ -608,10 +613,15 @@
                     <div class="service-icon">👥</div>
                     <div class="service-name">人才招聘</div>
                 </div>
-                <div class="service-content">依据组织配置，建立人才地图及画像。为各业务单元招聘关键人才，人才入职管理及人岗适配全流程管理。</div>
-                <div class="service-contact">
-                    <span class="contact-person">涂晓艳</span>
-                    <a href="tel:13510511026" class="contact-phone">13510511026</a>
+                <div class="service-content">依据组织配置，建立人才地图及画像。为各业务单元招聘关键人才，人才入职管理及人岗适配全流程管理。
+                    <span class="contact-tag">
+                        <svg class="tag-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 8c0 1 7 3.5 14.745 16.744s4.184-4.363 6.255-5.744c1.5-1 2.712-1.332 2.712-1.332C33.712 15.156 29.5 8 28 8z" fill="#00d6b9"/>
+                            <path d="M43.5 18.5c-1-.667-3.65-1.771-6.5-1.5a15 15 0 0 0-3.288.668s-1.212.332-2.712 1.332c-2.07 1.38-6.255 5.744-6.255 5.744-1.428 1.397-3.05 2.732-5.245 3.756s7 3 11.5 3c5.063 0 7-3.5 7-3.5 1.5-3.305 3.5-7 5.5-9.5" fill="#163c9a"/>
+                            <path d="M4 17.5v17c0 1 6 5.5 15 5.5 10 0 17.05-7.705 19-12 0 0-1.937 3.5-7 3.5-4.5 0-11.5-3-11.5-3-5.117-2.239-10.03-6.577-12.906-9.117C4.974 17.953 4 17.093 4 17.5z" fill="#3370ff"/>
+                        </svg>
+                        <a href="feishu://chat/user/tuxiaoyan_id">@涂晓艳</a>
+                    </span>
                 </div>
             </div>
             <!-- 2.绩效管理 -->
@@ -620,10 +630,15 @@
                     <div class="service-icon">📊</div>
                     <div class="service-name">绩效管理</div>
                 </div>
-                <div class="service-content">搭建绩效管理制度，推动绩效结果与人才应用联动管理。提供绩效考核、申诉、改进、落地全流程咨询。</div>
-                <div class="service-contact">
-                    <span class="contact-person">钟佼</span>
-                    <a href="tel:15171421197" class="contact-phone">15171421197</a>
+                <div class="service-content">搭建绩效管理制度，推动绩效结果与人才应用联动管理。提供绩效考核、申诉、改进、落地全流程咨询。
+                    <span class="contact-tag">
+                        <svg class="tag-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 8c0 1 7 3.5 14.745 16.744s4.184-4.363 6.255-5.744c1.5-1 2.712-1.332 2.712-1.332C33.712 15.156 29.5 8 28 8z" fill="#00d6b9"/>
+                            <path d="M43.5 18.5c-1-.667-3.65-1.771-6.5-1.5a15 15 0 0 0-3.288.668s-1.212.332-2.712 1.332c-2.07 1.38-6.255 5.744-6.255 5.744-1.428 1.397-3.05 2.732-5.245 3.756s7 3 11.5 3c5.063 0 7-3.5 7-3.5 1.5-3.305 3.5-7 5.5-9.5" fill="#163c9a"/>
+                            <path d="M4 17.5v17c0 1 6 5.5 15 5.5 10 0 17.05-7.705 19-12 0 0-1.937 3.5-7 3.5-4.5 0-11.5-3-11.5-3-5.117-2.239-10.03-6.577-12.906-9.117C4.974 17.953 4 17.093 4 17.5z" fill="#3370ff"/>
+                        </svg>
+                        <a href="feishu://chat/user/zhongjiao_id">@钟佼</a>
+                    </span>
                 </div>
             </div>
             <!-- 3.人才管理 -->
@@ -632,10 +647,15 @@
                     <div class="service-icon">🔄</div>
                     <div class="service-name">人才管理</div>
                 </div>
-                <div class="service-content">规范组织架构及岗位编制，搭建各岗位胜任力模型及任职资格。定期人才盘点解读，提供人才全生命周期管理咨询。</div>
-                <div class="service-contact">
-                    <span class="contact-person">林晓霞</span>
-                    <a href="tel:15218290708" class="contact-phone">15218290708</a>
+                <div class="service-content">规范组织架构及岗位编制，搭建各岗位胜任力模型及任职资格。定期人才盘点解读，提供人才全生命周期管理咨询。
+                    <span class="contact-tag">
+                        <svg class="tag-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 8c0 1 7 3.5 14.745 16.744s4.184-4.363 6.255-5.744c1.5-1 2.712-1.332 2.712-1.332C33.712 15.156 29.5 8 28 8z" fill="#00d6b9"/>
+                            <path d="M43.5 18.5c-1-.667-3.65-1.771-6.5-1.5a15 15 0 0 0-3.288.668s-1.212.332-2.712 1.332c-2.07 1.38-6.255 5.744-6.255 5.744-1.428 1.397-3.05 2.732-5.245 3.756s7 3 11.5 3c5.063 0 7-3.5 7-3.5 1.5-3.305 3.5-7 5.5-9.5" fill="#163c9a"/>
+                            <path d="M4 17.5v17c0 1 6 5.5 15 5.5 10 0 17.05-7.705 19-12 0 0-1.937 3.5-7 3.5-4.5 0-11.5-3-11.5-3-5.117-2.239-10.03-6.577-12.906-9.117C4.974 17.953 4 17.093 4 17.5z" fill="#3370ff"/>
+                        </svg>
+                        <a href="feishu://chat/user/linxiaoxia_id">@林晓霞</a>
+                    </span>
                 </div>
             </div>
             <!-- 4.人才培训 -->
@@ -644,24 +664,33 @@
                     <div class="service-icon">📚</div>
                     <div class="service-name">人才培训</div>
                 </div>
-                <div class="service-content">规划年度培训计划，制定学习地图，开发内部课程，搭建讲师队伍，培训效果评估，提供线上平台学习咨询。引进外训，为腰部、头部高潜赋能，打造学习型组织。</div>
-                <div class="service-contact">
-                    <span class="contact-person">李婷</span>
-                    <a href="tel:15767086465" class="contact-phone">15767086465</a>
+                <div class="service-content">规划年度培训计划，制定学习地图，开发内部课程，搭建讲师队伍，培训效果评估，提供线上平台学习咨询。引进外训，为腰部、头部高潜赋能，打造学习型组织。
+                    <span class="contact-tag">
+                        <svg class="tag-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 8c0 1 7 3.5 14.745 16.744s4.184-4.363 6.255-5.744c1.5-1 2.712-1.332 2.712-1.332C33.712 15.156 29.5 8 28 8z" fill="#00d6b9"/>
+                            <path d="M43.5 18.5c-1-.667-3.65-1.771-6.5-1.5a15 15 0 0 0-3.288.668s-1.212.332-2.712 1.332c-2.07 1.38-6.255 5.744-6.255 5.744-1.428 1.397-3.05 2.732-5.245 3.756s7 3 11.5 3c5.063 0 7-3.5 7-3.5 1.5-3.305 3.5-7 5.5-9.5" fill="#163c9a"/>
+                            <path d="M4 17.5v17c0 1 6 5.5 15 5.5 10 0 17.05-7.705 19-12 0 0-1.937 3.5-7 3.5-4.5 0-11.5-3-11.5-3-5.117-2.239-10.03-6.577-12.906-9.117C4.974 17.953 4 17.093 4 17.5z" fill="#3370ff"/>
+                        </svg>
+                        <a href="feishu://chat/user/liting_id">@李婷</a>
+                    </span>
                 </div>
             </div>
         </div>
 
-        <!-- 二、人事管理模块（标题+总述合并版） -->
+        <!-- 二、人事管理模块 -->
         <div class="service-card-long card-employee-title">
             <div class="service-header" style="flex-wrap: wrap; gap: 16px; margin-bottom: 0;">
                 <div style="display: flex; align-items: center; gap: 12px;">
                     <div class="service-icon">🤝</div>
                     <div class="service-name">人事管理</div>
                 </div>
-                <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
-                    <span style="font-weight: 600; font-size: 18px;">徐微芬</span>
-                    <a href="tel:13528892923" style="font-weight: bold; font-size: 18px;">13528892923</a>
+                <div class="feishu-contact">
+                    <svg class="feishu-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 8c0 1 7 3.5 14.745 16.744s4.184-4.363 6.255-5.744c1.5-1 2.712-1.332 2.712-1.332C33.712 15.156 29.5 8 28 8z" fill="#00d6b9"/>
+                        <path d="M43.5 18.5c-1-.667-3.65-1.771-6.5-1.5a15 15 0 0 0-3.288.668s-1.212.332-2.712 1.332c-2.07 1.38-6.255 5.744-6.255 5.744-1.428 1.397-3.05 2.732-5.245 3.756s7 3 11.5 3c5.063 0 7-3.5 7-3.5 1.5-3.305 3.5-7 5.5-9.5" fill="#163c9a"/>
+                        <path d="M4 17.5v17c0 1 6 5.5 15 5.5 10 0 17.05-7.705 19-12 0 0-1.937 3.5-7 3.5-4.5 0-11.5-3-11.5-3-5.117-2.239-10.03-6.577-12.906-9.117C4.974 17.953 4 17.093 4 17.5z" fill="#3370ff"/>
+                    </svg>
+                    <a href="feishu://chat/user/xuweifen_id">@徐微芬</a>
                 </div>
             </div>
             <div class="desc-text">
@@ -676,10 +705,15 @@
                     <div class="service-icon">👥</div>
                     <div class="service-name">员工招聘</div>
                 </div>
-                <div class="service-content">一线人力需求对接及交付，员工入、转、调、离及全生命周期管理。提供员工各项补贴政策解读。</div>
-                <div class="service-contact">
-                    <span class="contact-person">刘欣</span>
-                    <a href="tel:18126549936" class="contact-phone">18126549936</a>
+                <div class="service-content">一线人力需求对接及交付，员工入、转、调、离及全生命周期管理。提供员工各项补贴政策解读。
+                    <span class="contact-tag">
+                        <svg class="tag-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 8c0 1 7 3.5 14.745 16.744s4.184-4.363 6.255-5.744c1.5-1 2.712-1.332 2.712-1.332C33.712 15.156 29.5 8 28 8z" fill="#00d6b9"/>
+                            <path d="M43.5 18.5c-1-.667-3.65-1.771-6.5-1.5a15 15 0 0 0-3.288.668s-1.212.332-2.712 1.332c-2.07 1.38-6.255 5.744-6.255 5.744-1.428 1.397-3.05 2.732-5.245 3.756s7 3 11.5 3c5.063 0 7-3.5 7-3.5 1.5-3.305 3.5-7 5.5-9.5" fill="#163c9a"/>
+                            <path d="M4 17.5v17c0 1 6 5.5 15 5.5 10 0 17.05-7.705 19-12 0 0-1.937 3.5-7 3.5-4.5 0-11.5-3-11.5-3-5.117-2.239-10.03-6.577-12.906-9.117C4.974 17.953 4 17.093 4 17.5z" fill="#3370ff"/>
+                        </svg>
+                        <a href="feishu://chat/user/liuxin_id">@刘欣</a>
+                    </span>
                 </div>
             </div>
             <!-- 2.员工培训 -->
@@ -688,10 +722,15 @@
                     <div class="service-icon">🎓</div>
                     <div class="service-name">员工培训</div>
                 </div>
-                <div class="service-content">组织新员工入职培训及高技能岗位认证，并协助实施员工年度培训计划落地。</div>
-                <div class="service-contact">
-                    <span class="contact-person">颜荣</span>
-                    <a href="tel:18674565201" class="contact-phone">18674565201</a>
+                <div class="service-content">组织新员工入职培训及高技能岗位认证，并协助实施员工年度培训计划落地。
+                    <span class="contact-tag">
+                        <svg class="tag-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 8c0 1 7 3.5 14.745 16.744s4.184-4.363 6.255-5.744c1.5-1 2.712-1.332 2.712-1.332C33.712 15.156 29.5 8 28 8z" fill="#00d6b9"/>
+                            <path d="M43.5 18.5c-1-.667-3.65-1.771-6.5-1.5a15 15 0 0 0-3.288.668s-1.212.332-2.712 1.332c-2.07 1.38-6.255 5.744-6.255 5.744-1.428 1.397-3.05 2.732-5.245 3.756s7 3 11.5 3c5.063 0 7-3.5 7-3.5 1.5-3.305 3.5-7 5.5-9.5" fill="#163c9a"/>
+                            <path d="M4 17.5v17c0 1 6 5.5 15 5.5 10 0 17.05-7.705 19-12 0 0-1.937 3.5-7 3.5-4.5 0-11.5-3-11.5-3-5.117-2.239-10.03-6.577-12.906-9.117C4.974 17.953 4 17.093 4 17.5z" fill="#3370ff"/>
+                        </svg>
+                        <a href="feishu://chat/user/yanrong_id">@颜荣</a>
+                    </span>
                 </div>
             </div>
             <!-- 3.薪酬管理 -->
@@ -700,10 +739,15 @@
                     <div class="service-icon">💰</div>
                     <div class="service-name">薪酬管理</div>
                 </div>
-                <div class="service-content">薪资核算，社保、公积金、保险办理，个税申报、工资条发放，并提供薪资答疑。</div>
-                <div class="service-contact">
-                    <span class="contact-person">窦小顿</span>
-                    <a href="tel:15220080723" class="contact-phone">15220080723</a>
+                <div class="service-content">薪资核算，社保、公积金、保险办理，个税申报、工资条发放，并提供薪资答疑。
+                    <span class="contact-tag">
+                        <svg class="tag-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 8c0 1 7 3.5 14.745 16.744s4.184-4.363 6.255-5.744c1.5-1 2.712-1.332 2.712-1.332C33.712 15.156 29.5 8 28 8z" fill="#00d6b9"/>
+                            <path d="M43.5 18.5c-1-.667-3.65-1.771-6.5-1.5a15 15 0 0 0-3.288.668s-1.212.332-2.712 1.332c-2.07 1.38-6.255 5.744-6.255 5.744-1.428 1.397-3.05 2.732-5.245 3.756s7 3 11.5 3c5.063 0 7-3.5 7-3.5 1.5-3.305 3.5-7 5.5-9.5" fill="#163c9a"/>
+                            <path d="M4 17.5v17c0 1 6 5.5 15 5.5 10 0 17.05-7.705 19-12 0 0-1.937 3.5-7 3.5-4.5 0-11.5-3-11.5-3-5.117-2.239-10.03-6.577-12.906-9.117C4.974 17.953 4 17.093 4 17.5z" fill="#3370ff"/>
+                        </svg>
+                        <a href="feishu://chat/user/douxiaodun_id">@窦小顿</a>
+                    </span>
                 </div>
             </div>
             <!-- 4.企业文化 -->
@@ -712,52 +756,77 @@
                     <div class="service-icon">🎯</div>
                     <div class="service-name">企业文化</div>
                 </div>
-                <div class="service-content">企业文化传播与活动策划，企业文化宣导与设计制作。公司大型活动统筹与实施。</div>
-                <div class="service-contact">
-                    <span class="contact-person">梁芳莹</span>
-                    <a href="tel:13410896220" class="contact-phone">13410896220</a>
+                <div class="service-content">企业文化传播与活动策划，企业文化宣导与设计制作。公司大型活动统筹与实施。
+                    <span class="contact-tag">
+                        <svg class="tag-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 8c0 1 7 3.5 14.745 16.744s4.184-4.363 6.255-5.744c1.5-1 2.712-1.332 2.712-1.332C33.712 15.156 29.5 8 28 8z" fill="#00d6b9"/>
+                            <path d="M43.5 18.5c-1-.667-3.65-1.771-6.5-1.5a15 15 0 0 0-3.288.668s-1.212.332-2.712 1.332c-2.07 1.38-6.255 5.744-6.255 5.744-1.428 1.397-3.05 2.732-5.245 3.756s7 3 11.5 3c5.063 0 7-3.5 7-3.5 1.5-3.305 3.5-7 5.5-9.5" fill="#163c9a"/>
+                            <path d="M4 17.5v17c0 1 6 5.5 15 5.5 10 0 17.05-7.705 19-12 0 0-1.937 3.5-7 3.5-4.5 0-11.5-3-11.5-3-5.117-2.239-10.03-6.577-12.906-9.117C4.974 17.953 4 17.093 4 17.5z" fill="#3370ff"/>
+                        </svg>
+                        <a href="feishu://chat/user/liangfangying_id">@梁芳莹</a>
+                    </span>
                 </div>
             </div>
-            <!-- 5.员工关系 -->
+            <!-- 5.员工关系 - 郭晓莲带手机号 -->
             <div class="service-card card-employee">
                 <div class="service-header">
                     <div class="service-icon">❤️</div>
                     <div class="service-name">员工关系</div>
                 </div>
-                <div class="service-content">离职访谈、劳资关系调解处理。投诉与合理化建议的受理，员工劳资关系咨询解答。员工关怀、活动组织及各项福利的实施。</div>
-                <div class="service-contact">
-                    <span class="contact-person">郭晓莲</span>
-                    <a href="tel:18814099946" class="contact-phone">18814099946</a>
+                <div class="service-content">离职访谈、劳资关系调解处理。投诉与合理化建议的受理，员工劳资关系咨询解答。员工关怀、活动组织及各项福利的实施。
+                    <span class="contact-tag">
+                        <svg class="tag-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 8c0 1 7 3.5 14.745 16.744s4.184-4.363 6.255-5.744c1.5-1 2.712-1.332 2.712-1.332C33.712 15.156 29.5 8 28 8z" fill="#00d6b9"/>
+                            <path d="M43.5 18.5c-1-.667-3.65-1.771-6.5-1.5a15 15 0 0 0-3.288.668s-1.212.332-2.712 1.332c-2.07 1.38-6.255 5.744-6.255 5.744-1.428 1.397-3.05 2.732-5.245 3.756s7 3 11.5 3c5.063 0 7-3.5 7-3.5 1.5-3.305 3.5-7 5.5-9.5" fill="#163c9a"/>
+                            <path d="M4 17.5v17c0 1 6 5.5 15 5.5 10 0 17.05-7.705 19-12 0 0-1.937 3.5-7 3.5-4.5 0-11.5-3-11.5-3-5.117-2.239-10.03-6.577-12.906-9.117C4.974 17.953 4 17.093 4 17.5z" fill="#3370ff"/>
+                        </svg>
+                        <a href="feishu://chat/user/guoxiaolian_id">@郭晓莲</a> 18814099946
+                    </span>
                 </div>
             </div>
-            <!-- 6.考勤管理 -->
+            <!-- 6.考勤管理 - 双联系人 -->
             <div class="service-card card-employee">
                 <div class="service-header">
                     <div class="service-icon">⏰</div>
                     <div class="service-name">考勤管理</div>
                 </div>
-                <div class="service-content">考勤制度落地，各类假期办理，考勤异常处理及对接薪资核算、离职流程指引及协办，并提供考勤制度解读。</div>
-                <div class="service-contact">
-                    <span class="contact-person">职员考勤：刘启华</span>
-                    <a href="tel:13265538857" class="contact-phone">13265538857</a>
-                </div>
-                <div class="service-contact" style="margin-top:8px;">
-                    <span class="contact-person">员工考勤：倪萍</span>
-                    <a href="tel:15179326931" class="contact-phone">15179326931</a>
+                <div class="service-content">考勤制度落地，各类假期办理，考勤异常处理及对接薪资核算、离职流程指引及协办，并提供考勤制度解读。
+                    <span class="contact-tag">
+                        职员
+                        <svg class="tag-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 8c0 1 7 3.5 14.745 16.744s4.184-4.363 6.255-5.744c1.5-1 2.712-1.332 2.712-1.332C33.712 15.156 29.5 8 28 8z" fill="#00d6b9"/>
+                            <path d="M43.5 18.5c-1-.667-3.65-1.771-6.5-1.5a15 15 0 0 0-3.288.668s-1.212.332-2.712 1.332c-2.07 1.38-6.255 5.744-6.255 5.744-1.428 1.397-3.05 2.732-5.245 3.756s7 3 11.5 3c5.063 0 7-3.5 7-3.5 1.5-3.305 3.5-7 5.5-9.5" fill="#163c9a"/>
+                            <path d="M4 17.5v17c0 1 6 5.5 15 5.5 10 0 17.05-7.705 19-12 0 0-1.937 3.5-7 3.5-4.5 0-11.5-3-11.5-3-5.117-2.239-10.03-6.577-12.906-9.117C4.974 17.953 4 17.093 4 17.5z" fill="#3370ff"/>
+                        </svg>
+                        <a href="feishu://chat/user/liuqihua_id">@刘启华</a>
+                    </span>
+                    <span class="contact-tag">
+                        员工
+                        <svg class="tag-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 8c0 1 7 3.5 14.745 16.744s4.184-4.363 6.255-5.744c1.5-1 2.712-1.332 2.712-1.332C33.712 15.156 29.5 8 28 8z" fill="#00d6b9"/>
+                            <path d="M43.5 18.5c-1-.667-3.65-1.771-6.5-1.5a15 15 0 0 0-3.288.668s-1.212.332-2.712 1.332c-2.07 1.38-6.255 5.744-6.255 5.744-1.428 1.397-3.05 2.732-5.245 3.756s7 3 11.5 3c5.063 0 7-3.5 7-3.5 1.5-3.305 3.5-7 5.5-9.5" fill="#163c9a"/>
+                            <path d="M4 17.5v17c0 1 6 5.5 15 5.5 10 0 17.05-7.705 19-12 0 0-1.937 3.5-7 3.5-4.5 0-11.5-3-11.5-3-5.117-2.239-10.03-6.577-12.906-9.117C4.974 17.953 4 17.093 4 17.5z" fill="#3370ff"/>
+                        </svg>
+                        <a href="feishu://chat/user/niping_id">@倪萍</a>
+                    </span>
                 </div>
             </div>
         </div>
 
-        <!-- 三、行政服务模块（标题+总述合并版） -->
+        <!-- 三、行政服务模块 -->
         <div class="service-card-long card-admin-title">
             <div class="service-header" style="flex-wrap: wrap; gap: 16px; margin-bottom: 0;">
                 <div style="display: flex; align-items: center; gap: 12px;">
                     <div class="service-icon">📋</div>
                     <div class="service-name">行政服务</div>
                 </div>
-                <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
-                    <span style="font-weight: 600; font-size: 18px;">罗维</span>
-                    <a href="tel:13790186635" style="font-weight: bold; font-size: 18px;">13790186635</a>
+                <div class="feishu-contact">
+                    <svg class="feishu-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 8c0 1 7 3.5 14.745 16.744s4.184-4.363 6.255-5.744c1.5-1 2.712-1.332 2.712-1.332C33.712 15.156 29.5 8 28 8z" fill="#00d6b9"/>
+                        <path d="M43.5 18.5c-1-.667-3.65-1.771-6.5-1.5a15 15 0 0 0-3.288.668s-1.212.332-2.712 1.332c-2.07 1.38-6.255 5.744-6.255 5.744-1.428 1.397-3.05 2.732-5.245 3.756s7 3 11.5 3c5.063 0 7-3.5 7-3.5 1.5-3.305 3.5-7 5.5-9.5" fill="#163c9a"/>
+                        <path d="M4 17.5v17c0 1 6 5.5 15 5.5 10 0 17.05-7.705 19-12 0 0-1.937 3.5-7 3.5-4.5 0-11.5-3-11.5-3-5.117-2.239-10.03-6.577-12.906-9.117C4.974 17.953 4 17.093 4 17.5z" fill="#3370ff"/>
+                    </svg>
+                    <a href="feishu://chat/user/luowei_id">@罗维</a>
                 </div>
             </div>
             <div class="desc-text">
@@ -772,10 +841,15 @@
                     <div class="service-icon">🍽️</div>
                     <div class="service-name">餐饮服务</div>
                 </div>
-                <div class="service-content">客餐接待:客户用餐（需提前一天申请）、菜单确认、接待服务。员工就餐:每周菜谱设计、更新、就餐异常处理。</div>
-                <div class="service-contact">
-                    <span class="contact-person">黄曲乾</span>
-                    <a href="tel:19820570762" class="contact-phone">19820570762</a>
+                <div class="service-content">客餐接待:客户用餐（需提前一天申请）、菜单确认、接待服务。员工就餐:每周菜谱设计、更新、就餐异常处理。
+                    <span class="contact-tag">
+                        <svg class="tag-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 8c0 1 7 3.5 14.745 16.744s4.184-4.363 6.255-5.744c1.5-1 2.712-1.332 2.712-1.332C33.712 15.156 29.5 8 28 8z" fill="#00d6b9"/>
+                            <path d="M43.5 18.5c-1-.667-3.65-1.771-6.5-1.5a15 15 0 0 0-3.288.668s-1.212.332-2.712 1.332c-2.07 1.38-6.255 5.744-6.255 5.744-1.428 1.397-3.05 2.732-5.245 3.756s7 3 11.5 3c5.063 0 7-3.5 7-3.5 1.5-3.305 3.5-7 5.5-9.5" fill="#163c9a"/>
+                            <path d="M4 17.5v17c0 1 6 5.5 15 5.5 10 0 17.05-7.705 19-12 0 0-1.937 3.5-7 3.5-4.5 0-11.5-3-11.5-3-5.117-2.239-10.03-6.577-12.906-9.117C4.974 17.953 4 17.093 4 17.5z" fill="#3370ff"/>
+                        </svg>
+                        <a href="feishu://chat/user/huangquqian_id">@黄曲乾</a>
+                    </span>
                 </div>
             </div>
             <div class="service-card card-admin">
@@ -783,23 +857,32 @@
                     <div class="service-icon">🏠</div>
                     <div class="service-name">宿舍&5S</div>
                 </div>
-                <div class="service-content">宿舍管理:入住/退宿、钥匙领取、宿舍报修、水电查询、费用结算。清洁卫生:生产/办公/宿舍区域卫生全面清洁。行政5S稽核。</div>
-                <div class="service-contact">
-                    <span class="contact-person">刘向红</span>
-                    <a href="tel:15302671886" class="contact-phone">15302671886</a>
+                <div class="service-content">宿舍管理:入住/退宿、钥匙领取、宿舍报修、水电查询、费用结算。清洁卫生:生产/办公/宿舍区域卫生全面清洁。行政5S稽核。
+                    <span class="contact-tag">
+                        <svg class="tag-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 8c0 1 7 3.5 14.745 16.744s4.184-4.363 6.255-5.744c1.5-1 2.712-1.332 2.712-1.332C33.712 15.156 29.5 8 28 8z" fill="#00d6b9"/>
+                            <path d="M43.5 18.5c-1-.667-3.65-1.771-6.5-1.5a15 15 0 0 0-3.288.668s-1.212.332-2.712 1.332c-2.07 1.38-6.255 5.744-6.255 5.744-1.428 1.397-3.05 2.732-5.245 3.756s7 3 11.5 3c5.063 0 7-3.5 7-3.5 1.5-3.305 3.5-7 5.5-9.5" fill="#163c9a"/>
+                            <path d="M4 17.5v17c0 1 6 5.5 15 5.5 10 0 17.05-7.705 19-12 0 0-1.937 3.5-7 3.5-4.5 0-11.5-3-11.5-3-5.117-2.239-10.03-6.577-12.906-9.117C4.974 17.953 4 17.093 4 17.5z" fill="#3370ff"/>
+                        </svg>
+                        <a href="feishu://chat/user/liuxianghong_id">@刘向红</a>
+                    </span>
                 </div>
             </div>
-
             <!-- 第2行：前台指南、基建&修缮 -->
             <div class="service-card card-admin">
                 <div class="service-header">
                     <div class="service-icon">📋</div>
                     <div class="service-name">前台指南</div>
                 </div>
-                <div class="service-content">外来来访接待与指引，会议室管理。停车位、就餐办理及费用咨询。快递收发及费用结算。</div>
-                <div class="service-contact">
-                    <span class="contact-person">覃曼</span>
-                    <a href="tel:15343065738" class="contact-phone">15343065738</a>
+                <div class="service-content">外来来访接待与指引，会议室管理。停车位、就餐办理及费用咨询。快递收发及费用结算。
+                    <span class="contact-tag">
+                        <svg class="tag-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 8c0 1 7 3.5 14.745 16.744s4.184-4.363 6.255-5.744c1.5-1 2.712-1.332 2.712-1.332C33.712 15.156 29.5 8 28 8z" fill="#00d6b9"/>
+                            <path d="M43.5 18.5c-1-.667-3.65-1.771-6.5-1.5a15 15 0 0 0-3.288.668s-1.212.332-2.712 1.332c-2.07 1.38-6.255 5.744-6.255 5.744-1.428 1.397-3.05 2.732-5.245 3.756s7 3 11.5 3c5.063 0 7-3.5 7-3.5 1.5-3.305 3.5-7 5.5-9.5" fill="#163c9a"/>
+                            <path d="M4 17.5v17c0 1 6 5.5 15 5.5 10 0 17.05-7.705 19-12 0 0-1.937 3.5-7 3.5-4.5 0-11.5-3-11.5-3-5.117-2.239-10.03-6.577-12.906-9.117C4.974 17.953 4 17.093 4 17.5z" fill="#3370ff"/>
+                        </svg>
+                        <a href="feishu://chat/user/qinman_id">@覃曼</a>
+                    </span>
                 </div>
             </div>
             <div class="service-card card-admin">
@@ -807,23 +890,32 @@
                     <div class="service-icon">🔧</div>
                     <div class="service-name">基建&修缮</div>
                 </div>
-                <div class="service-content">基建工程:改扩建、办公室/车间等公共区域装修。厂务维修:公共区域水电检修、公共设施维修保养及绿化维护。</div>
-                <div class="service-contact">
-                    <span class="contact-person">杨凌飞</span>
-                    <a href="tel:13798590801" class="contact-phone">13798590801</a>
+                <div class="service-content">基建工程:改扩建、办公室/车间等公共区域装修。厂务维修:公共区域水电检修、公共设施维修保养及绿化维护。
+                    <span class="contact-tag">
+                        <svg class="tag-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 8c0 1 7 3.5 14.745 16.744s4.184-4.363 6.255-5.744c1.5-1 2.712-1.332 2.712-1.332C33.712 15.156 29.5 8 28 8z" fill="#00d6b9"/>
+                            <path d="M43.5 18.5c-1-.667-3.65-1.771-6.5-1.5a15 15 0 0 0-3.288.668s-1.212.332-2.712 1.332c-2.07 1.38-6.255 5.744-6.255 5.744-1.428 1.397-3.05 2.732-5.245 3.756s7 3 11.5 3c5.063 0 7-3.5 7-3.5 1.5-3.305 3.5-7 5.5-9.5" fill="#163c9a"/>
+                            <path d="M4 17.5v17c0 1 6 5.5 15 5.5 10 0 17.05-7.705 19-12 0 0-1.937 3.5-7 3.5-4.5 0-11.5-3-11.5-3-5.117-2.239-10.03-6.577-12.906-9.117C4.974 17.953 4 17.093 4 17.5z" fill="#3370ff"/>
+                        </svg>
+                        <a href="feishu://chat/user/yanglingfei_id">@杨凌飞</a>
+                    </span>
                 </div>
             </div>
-
             <!-- 第3行：固定资产&行政费用、安保服务 -->
             <div class="service-card card-admin">
                 <div class="service-header">
                     <div class="service-icon">🛋️</div>
                     <div class="service-name">固定资产&行政费用</div>
                 </div>
-                <div class="service-content">固定资产:行政资产申购、盘点、维修、报废处理。行政费用：费用核算分析，房租、水电等费用分摊各中心。行政各类合同的管理。</div>
-                <div class="service-contact">
-                    <span class="contact-person">石爱春</span>
-                    <a href="tel:19017185067" class="contact-phone">19017185067</a>
+                <div class="service-content">固定资产:行政资产申购、盘点、维修、报废处理。行政费用：费用核算分析，房租、水电等费用分摊各中心。行政各类合同的管理。
+                    <span class="contact-tag">
+                        <svg class="tag-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 8c0 1 7 3.5 14.745 16.744s4.184-4.363 6.255-5.744c1.5-1 2.712-1.332 2.712-1.332C33.712 15.156 29.5 8 28 8z" fill="#00d6b9"/>
+                            <path d="M43.5 18.5c-1-.667-3.65-1.771-6.5-1.5a15 15 0 0 0-3.288.668s-1.212.332-2.712 1.332c-2.07 1.38-6.255 5.744-6.255 5.744-1.428 1.397-3.05 2.732-5.245 3.756s7 3 11.5 3c5.063 0 7-3.5 7-3.5 1.5-3.305 3.5-7 5.5-9.5" fill="#163c9a"/>
+                            <path d="M4 17.5v17c0 1 6 5.5 15 5.5 10 0 17.05-7.705 19-12 0 0-1.937 3.5-7 3.5-4.5 0-11.5-3-11.5-3-5.117-2.239-10.03-6.577-12.906-9.117C4.974 17.953 4 17.093 4 17.5z" fill="#3370ff"/>
+                        </svg>
+                        <a href="feishu://chat/user/shiaichun_id">@石爱春</a>
+                    </span>
                 </div>
             </div>
             <div class="service-card card-admin">
@@ -831,23 +923,32 @@
                     <div class="service-icon">🚪</div>
                     <div class="service-name">安保服务</div>
                 </div>
-                <div class="service-content">安全秩序:人员安全及物品进出放行管理。外来人员：来访人员引导及治安维护。协助生产鞋柜管理及工衣发放与回收清洗。联动EHS安全生产管理。</div>
-                <div class="service-contact">
-                    <span class="contact-person">李杰</span>
-                    <a href="tel:13427826002" class="contact-phone">13427826002</a>
+                <div class="service-content">安全秩序:人员安全及物品进出放行管理。外来人员：来访人员引导及治安维护。协助生产鞋柜管理及工衣发放与回收清洗。联动EHS安全生产管理。
+                    <span class="contact-tag">
+                        <svg class="tag-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 8c0 1 7 3.5 14.745 16.744s4.184-4.363 6.255-5.744c1.5-1 2.712-1.332 2.712-1.332C33.712 15.156 29.5 8 28 8z" fill="#00d6b9"/>
+                            <path d="M43.5 18.5c-1-.667-3.65-1.771-6.5-1.5a15 15 0 0 0-3.288.668s-1.212.332-2.712 1.332c-2.07 1.38-6.255 5.744-6.255 5.744-1.428 1.397-3.05 2.732-5.245 3.756s7 3 11.5 3c5.063 0 7-3.5 7-3.5 1.5-3.305 3.5-7 5.5-9.5" fill="#163c9a"/>
+                            <path d="M4 17.5v17c0 1 6 5.5 15 5.5 10 0 17.05-7.705 19-12 0 0-1.937 3.5-7 3.5-4.5 0-11.5-3-11.5-3-5.117-2.239-10.03-6.577-12.906-9.117C4.974 17.953 4 17.093 4 17.5z" fill="#3370ff"/>
+                        </svg>
+                        <a href="feishu://chat/user/lijie_id">@李杰</a> 13427826002
+                    </span>
                 </div>
             </div>
-
             <!-- 第4行：差旅服务、EHS安全 -->
             <div class="service-card card-admin">
                 <div class="service-header">
                     <div class="service-icon">✈️</div>
                     <div class="service-name">差旅服务</div>
                 </div>
-                <div class="service-content">机票预定:提前5天飞书申报,根据要求附联络函、证件、出差告知函。签证办理:需飞书提前申请，需附联络函与出差告知函。酒店预订:飞书需提交《XZ01-行政服务申请》流程。公务用车、网约用车（滴滴、货拉拉）调度。出差费用稽核及申报。</div>
-                <div class="service-contact">
-                    <span class="contact-person">孙明慧</span>
-                    <a href="tel:18277348505" class="contact-phone">18277348505</a>
+                <div class="service-content">机票预定:提前5天飞书申报,根据要求附联络函、证件、出差告知函。签证办理:需飞书提前申请，需附联络函与出差告知函。酒店预订:飞书需提交《XZ01-行政服务申请》流程。公务用车、网约用车（滴滴、货拉拉）调度。出差费用稽核及申报。
+                    <span class="contact-tag">
+                        <svg class="tag-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 8c0 1 7 3.5 14.745 16.744s4.184-4.363 6.255-5.744c1.5-1 2.712-1.332 2.712-1.332C33.712 15.156 29.5 8 28 8z" fill="#00d6b9"/>
+                            <path d="M43.5 18.5c-1-.667-3.65-1.771-6.5-1.5a15 15 0 0 0-3.288.668s-1.212.332-2.712 1.332c-2.07 1.38-6.255 5.744-6.255 5.744-1.428 1.397-3.05 2.732-5.245 3.756s7 3 11.5 3c5.063 0 7-3.5 7-3.5 1.5-3.305 3.5-7 5.5-9.5" fill="#163c9a"/>
+                            <path d="M4 17.5v17c0 1 6 5.5 15 5.5 10 0 17.05-7.705 19-12 0 0-1.937 3.5-7 3.5-4.5 0-11.5-3-11.5-3-5.117-2.239-10.03-6.577-12.906-9.117C4.974 17.953 4 17.093 4 17.5z" fill="#3370ff"/>
+                        </svg>
+                        <a href="feishu://chat/user/sunminghui_id">@孙明慧</a>
+                    </span>
                 </div>
             </div>
             <div class="service-card card-admin">
@@ -855,24 +956,34 @@
                     <div class="service-icon">🚨</div>
                     <div class="service-name">EHS安全</div>
                 </div>
-                <div class="service-content">消防安全:内部消防设施、特种设备、锂电池存放等安全管理，外部消防检查工作的对接及提案改善。工业安全：动火、动土、高空作业审批，环保与危废治理，安全生产检查与监督。职业健康：工伤、劳动防护、职业病、食品安全等管理。EHS文化建设：建立安全环保培训机制，定期消防演习，形成安全标兵评比。</div>
-                <div class="service-contact">
-                    <span class="contact-person">石法宪</span>
-                    <a href="tel:13556839568" class="contact-phone">13556839568</a>
+                <div class="service-content">消防安全:内部消防设施、特种设备、锂电池存放等安全管理，外部消防检查工作的对接及提案改善。工业安全：动火、动土、高空作业审批，环保与危废治理，安全生产检查与监督。职业健康：工伤、劳动防护、职业病、食品安全等管理。EHS文化建设：建立安全环保培训机制，定期消防演习，形成安全标兵评比。
+                    <span class="contact-tag">
+                        <svg class="tag-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 8c0 1 7 3.5 14.745 16.744s4.184-4.363 6.255-5.744c1.5-1 2.712-1.332 2.712-1.332C33.712 15.156 29.5 8 28 8z" fill="#00d6b9"/>
+                            <path d="M43.5 18.5c-1-.667-3.65-1.771-6.5-1.5a15 15 0 0 0-3.288.668s-1.212.332-2.712 1.332c-2.07 1.38-6.255 5.744-6.255 5.744-1.428 1.397-3.05 2.732-5.245 3.756s7 3 11.5 3c5.063 0 7-3.5 7-3.5 1.5-3.305 3.5-7 5.5-9.5" fill="#163c9a"/>
+                            <path d="M4 17.5v17c0 1 6 5.5 15 5.5 10 0 17.05-7.705 19-12 0 0-1.937 3.5-7 3.5-4.5 0-11.5-3-11.5-3-5.117-2.239-10.03-6.577-12.906-9.117C4.974 17.953 4 17.093 4 17.5z" fill="#3370ff"/>
+                        </svg>
+                        <a href="feishu://chat/user/shifaxian_id">@石法宪</a> 13556839568
+                    </span>
                 </div>
             </div>
         </div>
 
-        <!-- 综合服务总览 -->
+        <!-- 综合服务 - 李伟带手机号 -->
         <div class="service-card-long card-admin">
             <div class="service-header">
                 <div class="service-icon">📎</div>
                 <div class="service-name">综合服务</div>
             </div>
-            <div class="service-content">与物业、政府外联对接及行政各模块工作的协调。建立行政各项费用标准及降本增效的推动。提升员工满意度，对员工的投诉与建议及时改善。提高行政服务质量，增强员工幸福体感。</div>
-            <div class="service-contact">
-                <span class="contact-person">李伟</span>
-                <a href="tel:13414403431" class="contact-phone">13414403431</a>
+            <div class="service-content">与物业、政府外联对接及行政各模块工作的协调。建立行政各项费用标准及降本增效的推动。提升员工满意度，对员工的投诉与建议及时改善。提高行政服务质量，增强员工幸福体感。
+                <span class="contact-tag">
+                    <svg class="tag-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 8c0 1 7 3.5 14.745 16.744s4.184-4.363 6.255-5.744c1.5-1 2.712-1.332 2.712-1.332C33.712 15.156 29.5 8 28 8z" fill="#00d6b9"/>
+                        <path d="M43.5 18.5c-1-.667-3.65-1.771-6.5-1.5a15 15 0 0 0-3.288.668s-1.212.332-2.712 1.332c-2.07 1.38-6.255 5.744-6.255 5.744-1.428 1.397-3.05 2.732-5.245 3.756s7 3 11.5 3c5.063 0 7-3.5 7-3.5 1.5-3.305 3.5-7 5.5-9.5" fill="#163c9a"/>
+                        <path d="M4 17.5v17c0 1 6 5.5 15 5.5 10 0 17.05-7.705 19-12 0 0-1.937 3.5-7 3.5-4.5 0-11.5-3-11.5-3-5.117-2.239-10.03-6.577-12.906-9.117C4.974 17.953 4 17.093 4 17.5z" fill="#3370ff"/>
+                    </svg>
+                    <a href="feishu://chat/user/liwei_id">@李伟</a> 13414403431
+                </span>
             </div>
         </div>
 
@@ -882,38 +993,40 @@
                 <div class="text-section">
                     <p class="no-indent"><span class="bold">各位同事：</span></p>
                     <p>在赛尔美工作期间，如您遇到困难需要协助，或有合理化建议请告诉我们，欢迎通过以下方式联系我们：</p>
-                    <p><span class="bold">📞 服务热线：<a href="tel:15343065738">15343065738</a></span></p>
+                    <p><span class="bold">📞 服务热线：<a href="tel:15361803486">15361803486</a></span></p>
                     <p><span class="bold">📱 在线提交：扫码即可留言</span></p>
                     <p>您的诉求我们在 24小时内 给予回应。</p>
                 </div>
             </div>
         </div>
 
-        <!-- 底部二维码卡片 -->
+        <!-- 底部二维码卡片（占位预留） -->
         <div class="bottom-qr-card">
             <div class="bottom-qr-title">📱 扫码服务通道</div>
             <div class="bottom-qr-body">
                 <div class="qr-item">
                     <div class="qr-item-header">💬 援助/投诉</div>
                     <div class="qr-item-body">
-                        <img src="https://p3-flow-image-sign.byteimg.com/tos-cn-i-a9rns2rl98/03611c33939e41319443102014040750~tplv-a9rns2rl98-image.image" class="qr-img" alt="援助/投诉二维码">
-                        <div class="qr-label">援助/投诉</div>
-                        <div class="qr-sublabel">扫码提交您的诉求</div>
+                        <div class="qr-placeholder">二维码位置预留</div>
+                        <div class="qr-label">一键人力资源服务</div>
+                        <div class="qr-sublabel">微信扫一扫</div>
+                        <div class="qr-sublabel">在线提交您的意见或诉求</div>
                     </div>
                 </div>
                 <div class="qr-item">
-                    <div class="qr-item-header">💡 建议/反馈</div>
+                    <div class="qr-item-header">🏠 住宿/就餐/维修/安全等</div>
                     <div class="qr-item-body">
-                        <img src="https://p3-flow-image-sign.byteimg.com/tos-cn-i-a9rns2rl98/29499d37812b4011990d301924010465~tplv-a9rns2rl98-image.image" class="qr-img" alt="建议/反馈二维码">
-                        <div class="qr-label">建议/反馈</div>
-                        <div class="qr-sublabel">扫码提出您的建议</div>
+                        <div class="qr-placeholder">二维码位置预留</div>
+                        <div class="qr-label">一键行政服务</div>
+                        <div class="qr-sublabel">微信扫一扫</div>
+                        <div class="qr-sublabel">提交各类意见与建议</div>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="footer-info">
-            赛尔美人力行政中心 2026年6月30日更新
+            赛尔人力行政中心 2026年6月30日更新
         </div>
     </div>
 </body>
